@@ -1,0 +1,11 @@
+
+#utc-clock{
+  height: 100px;
+  width: 370px;
+  border: 6px solid black;
+  background-color: #292b2b;
+  color: #8ca7c3;
+  font-family: helvetica;
+  font-size: 4.5em;
+  margin-top: 60px;
+}

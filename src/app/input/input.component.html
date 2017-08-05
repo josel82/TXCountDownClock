@@ -1,0 +1,41 @@
+<div class="col-md-8 col-md-offset-2" id="input-form">
+  <div class="row">
+    <div class="col-xs-4 input-cont">
+      <input type="text"
+      name="hour" id="hour"
+      placeholder='00'
+      min=0
+      maxlength=2
+      #hour>
+    </div>
+    <div class="col-xs-4 input-cont">
+      <input type="text"
+       name="min"
+       id="min"
+       placeholder='00'
+       min=0
+       maxlength=2
+       #min>
+    </div>
+    <div class="col-xs-4 input-cont">
+      <input type="text"
+      name="sec" id="sec"
+      placeholder='00'
+      min=0
+      maxlength=2
+      #sec>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-xs-6">
+      <button id="btn-start"
+      (click)="onStartCount(hour,min,sec)">Start</button>
+    </div>
+    <div class="col-xs-6">
+      <button id="btn-reset"
+      class="pull-right"
+      (click)="onClearCount()">Reset</button>
+    </div>
+  </div>
+</div>

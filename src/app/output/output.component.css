@@ -1,0 +1,29 @@
+#onair{
+  width: 470px;
+  height: 214px;
+  border: 15px solid black;
+  font-family: "bebas-neue",sans-serif;
+  font-size: 10em;
+  font-weight: bold;
+}
+
+.onair{
+  background-color: #f22222;
+  color: white;
+}
+
+.offair{
+  background-color: #360508;
+  color: #5d5d36;
+}
+
+#countdown-clock{
+  height: 100px;
+  width: 370px;
+  border: 6px solid black;
+  background-color: #292b2b;
+  color: #8ca7c3;
+  font-family: helvetica;
+  font-size: 4.5em;
+  margin-top: 60px;
+}
