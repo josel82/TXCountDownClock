@@ -16,10 +16,23 @@ input[type=text]::-webkit-outer-spin-button {
     margin: 0;
 }
 #input-form{
-  margin-top: 140px;
+  margin-bottom: 40px;
+  max-width: 400px;
+  display: inline-block;
 }
 .input-cont{
   text-align: center;
+}
+.input-title{
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  color: #baff54;
+  padding: 20px 0;
+}
+.input-title h3{
+  display: inline-block;
+  background-color: black;
+  padding: 5px
 }
 button{
   width: 135px;
@@ -49,5 +62,7 @@ button#btn-start{
 }
 button#btn-reset{
   background-color: #790000;
-
+}
+#buttons-wrapper{
+  margin-top: 40px;
 }

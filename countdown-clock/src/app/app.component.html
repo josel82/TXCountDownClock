@@ -1,10 +1,6 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <div class="col-xs-12 text-center" id="utc-clock">{{ time.hours }}:{{ time.minutes }}:{{ time.seconds }}</div>
-    </div>
-  </div>
-  <div class="row">
+  <app-current-time></app-current-time>
+  <div class="row" id="content">
     <div class="col-md-6">
       <app-input></app-input>
     </div>

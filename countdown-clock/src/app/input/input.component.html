@@ -1,41 +1,50 @@
-<div class="col-md-8 col-md-offset-2" id="input-form">
-  <div class="row">
-    <div class="col-xs-4 input-cont">
-      <input type="text"
-      name="hour" id="hour"
-      placeholder='00'
-      min=0
-      maxlength=2
-      #hour>
-    </div>
-    <div class="col-xs-4 input-cont">
-      <input type="text"
-       name="min"
-       id="min"
-       placeholder='00'
-       min=0
-       maxlength=2
-       #min>
-    </div>
-    <div class="col-xs-4 input-cont">
-      <input type="text"
-      name="sec" id="sec"
-      placeholder='00'
-      min=0
-      maxlength=2
-      #sec>
+<div class="row text-center">
+    <div class="col-md-8 col-md-offset-2" id="input-form">
+      <div class="row">
+        <div class="col-xs-12 input-title text-center">
+          <h3>time input</h3>
+        </div>
+      </div>
+
+        <form [formGroup]="timeForm" (ngSubmit)="onStartCount()">
+          <div class="row">
+          <div class="col-xs-4 input-cont">
+            <input type="text"
+            id="hour"
+            placeholder='00'
+            min=0
+            maxlength=2
+            formControlName="hours">
+          </div>
+          <div class="col-xs-4 input-cont">
+            <input type="text"
+             id="min"
+             placeholder='00'
+             min=0
+             maxlength=2
+             formControlName="minutes">
+          </div>
+          <div class="col-xs-4 input-cont">
+            <input type="text"
+            id="sec"
+            placeholder='00'
+            min=0
+            maxlength=2
+            formControlName="seconds">
+          </div>
+        </div>
+        <div class="row" id="buttons-wrapper">
+          <div class="col-xs-6">
+            <button id="btn-start"
+            type="submit">Start</button>
+          </div>
+          <div class="col-xs-6">
+            <button id="btn-reset"
+            class="pull-right"
+            type="button"
+            (click)="onClearCount()">Reset</button>
+          </div>
+          </div>
+        </form>
     </div>
   </div>
-  <br><br>
-  <div class="row">
-    <div class="col-xs-6">
-      <button id="btn-start"
-      (click)="onStartCount(hour,min,sec)">Start</button>
-    </div>
-    <div class="col-xs-6">
-      <button id="btn-reset"
-      class="pull-right"
-      (click)="onClearCount()">Reset</button>
-    </div>
-  </div>
-</div>
