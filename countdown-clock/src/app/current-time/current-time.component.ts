@@ -10,12 +10,12 @@ import { CounterService } from "app/shared/counter.service";
 })
 export class CurrentTimeComponent implements OnInit {
 
-  time = {
+  time= {
     hours : '00',
     minutes : '00',
     seconds : '00'
   }
-  cntDwn:Object = {
+  cntDwn = {
     hour:'00',
     min:'00',
     sec:'00'

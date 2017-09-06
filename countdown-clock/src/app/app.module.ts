@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { InputComponent } from './input/input.component';
@@ -20,7 +20,7 @@ import { CounterService } from "app/shared/counter.service";
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpModule
   ],
   providers: [CounterService],
   bootstrap: [AppComponent]

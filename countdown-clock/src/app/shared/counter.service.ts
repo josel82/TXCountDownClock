@@ -2,7 +2,7 @@ import { Subject } from 'rxjs/Subject';
 
 export class CounterService{
 
-  timeUpdated = new Subject<Object>();
+  timeUpdated = new Subject<any>();
   flag = new Subject<boolean>();
   countingDown = false;
   input: Date;
@@ -42,17 +42,17 @@ export class CounterService{
  //Countdown clock
   diff(t2,t1){
 
-    let res = Math.abs(t2 - t1);
-
+    let res = Math.abs(Math.floor(t2/1000) - Math.floor(t1/1000));
+    
     if(res === 0){ //checks if the time is out
        this.flag.next(true); //turns the "On Air" sign on
     }
       //time difference calculation
-      let h = Math.floor(res/3600000);
+      let h = Math.floor(res/3600);
       let hour = h < 10 ? '0'+h.toString() : h.toString();
-      let m = Math.floor((res%3600000)/60000);
+      let m = Math.floor((res%3600000)/60);
       let min = m < 10 ? '0'+m.toString() : m.toString();
-      let s = Math.floor(((res%3600000)%60000)/1000);
+      let s = Math.floor((res%3600000)%60000);
       let sec = s < 10 ? '0'+s.toString() : s.toString();
       let time = {
         hour: hour.toString(),

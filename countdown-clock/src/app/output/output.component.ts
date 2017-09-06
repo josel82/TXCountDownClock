@@ -8,7 +8,7 @@ import { CounterService } from '../shared/counter.service';
   styleUrls: ['./output.component.css']
 })
 export class OutputComponent{
-  timeOutput: Object = {
+  timeOutput = {
     hour: '00',
     min: '00',
     sec: '00'

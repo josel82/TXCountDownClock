@@ -30,9 +30,9 @@ export class InputComponent implements OnInit{
       alert('Please fill in all fields!');
     }else{
       let targetTime = new Date();
-      targetTime.setHours = h;
-      targetTime.setMinutes = m;
-      targetTime.setSeconds = s;
+      targetTime.setHours(h);
+      targetTime.setMinutes(m);
+      targetTime.setSeconds(s);
       this.counterService.setCounter(targetTime);
     }
 
